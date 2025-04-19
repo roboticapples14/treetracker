@@ -14,8 +14,8 @@ def get_logged_area(tif1: GeoTiff, tif2: GeoTiff):
     forest_cover_2_tif = get_forest_cover(tif2)
     delta_forest_cover_tif = tif1.clone_shape()
 
-    forest_cover_1_tile = forest_cover_1_tif.get_all_as_tile().m
-    forest_cover_2_tile = forest_cover_2_tif.get_all_as_tile().m
+    forest_cover_1_tile = forest_cover_1_tif.get_all_as_tile()
+    forest_cover_2_tile = forest_cover_2_tif.get_all_as_tile()
 
     delta_forest_cover_mat = forest_cover_1_tile.m - forest_cover_2_tile.m
     delta_forest_cover_tile = forest_cover_1_tile.clone_shape()
